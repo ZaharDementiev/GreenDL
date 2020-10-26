@@ -1,0 +1,564 @@
+@media screen and (max-width: 1440px){
+  .product {
+    padding-top: 80px;
+    &__content{
+      padding-right: 0;
+    }
+  }
+
+
+}
+@media screen and (max-width: 1200px){
+  header{
+    padding: 15px 0;
+  }
+  .header{
+    &__logo{
+      width: 85px;
+    }
+    &__phone{
+      bottom: -15px;
+    }
+    &__cart {
+      width: 85px;
+      a svg{
+        width: 28px;
+      }
+    }
+  }
+  .section__sliderHome .slider__item{
+    height: 528px;
+    &-content {
+      max-width: 725px;
+    }
+  }
+  .section__benefits {
+    padding: 65px 0;
+    ul li {
+      h3 {
+        font-size: 18px;
+      }
+      .section__benefits ul li p {
+        font-size: 16px;
+      }
+    }
+  }
+  .section__salesHits{
+    padding-bottom: 0;
+    &-pagination {
+      padding: 35px 0 80px;
+    }
+  }
+  .section__about h2 {
+    padding: 60px 0;
+  }
+  .section__about{
+    padding-bottom: 60px;
+    &-img {
+      margin-bottom: 60px;
+      img {
+        max-height: 300px;
+      }
+    }
+    &-desc{
+      max-width: 700px;
+      margin: 0 auto 60px;
+      font-size: 16px;
+    }
+    &-btn {
+      padding: 16px 42px;
+      font-size: 16px;
+    }
+  }
+  footer {
+    padding: 40px 0 15px;
+  }
+  .footer{
+    &__contacts {
+      h2{
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+      p{
+        margin-bottom: 30px;
+      }
+    }
+    &__menu ul li{
+      margin: 0 10px;
+      a{
+        font-size: 14px;
+      }
+    }
+  }
+  .product{
+    &__content{
+      .info{
+        max-width: 480px;
+      }
+      .image {
+        max-width: 440px;
+      }
+    }
+    &__description{
+      max-width: 800px;
+      h2{
+        font-size: 24px;
+        margin-bottom: 45px;
+      }
+      .desc{
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px){
+  .wrapper{
+    padding-top: 80px;
+  }
+  header{
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background-color: #fff;
+  }
+  .header{
+    align-items: center;
+    &__phone{
+      display: none;
+    }
+    &__menu ul li {
+      margin: 0 10px;
+      a{
+        font-size: 14px;
+      }
+    }
+  }
+  .footer__menu{
+    margin: 0;
+  }
+  .section__sliderHome .slider__item {
+    height: 390px;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      background-color: #fff;
+      opacity: .4;
+    }
+    &-content{
+      position: relative;
+      padding-top: 0;
+      z-index: 2;
+    }
+  }
+  .section{
+    padding: 45px 0;
+    &__benefits ul li{
+      margin: 0 20px;
+      h3{
+        font-size: 14px;
+        line-height: 16px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+  .section__salesHits{
+    padding-top: 45px;
+    &-list .item{
+      padding:  0 15px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      margin: 0 0 44px;
+    }
+  }
+  .section__about{
+    h2{
+      padding: 60px 0 45px;
+    }
+    &-img{
+      margin-bottom: 45px;
+    }
+    &-desc {
+      margin: 0 auto 45px;
+      font-size: 14px;
+    }
+  }
+  .product{
+    padding-top: 30px;
+    &__content {
+      .info {
+        min-height: 300px;
+        margin-left: 30px;
+        padding: 20px;
+        border-radius: 20px;
+        h1{
+          font-size: 20px;
+          line-height: 1.1;
+        }
+        .price{
+          font-size: 20px;
+          line-height: 1.1;
+          margin-bottom: 25px;
+        }
+        .options{
+          li{
+            font-size: 16px;
+            line-height: 1.1;
+            b{
+              font-weight: 500;
+            }
+          }
+        }
+        .buttons{
+          padding-left: 0;
+        }
+
+
+      }
+    }
+    &__description{
+      padding-bottom: 45px;
+      h2 {
+        margin-bottom: 39px;
+      }
+    }
+  }
+  .section__cart {
+    padding-top: 65px;
+    .tableCart{
+      &__body .tr .td{
+        min-height: 130px;
+      }
+      &__header .td {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        text-transform: capitalize;
+        letter-spacing: 0.24px;
+      }
+      .tr .td{
+        &:nth-child(1) {
+          width:18%;
+        }
+        &:nth-child(2) {
+          width: 28.5%;
+        }
+        &:nth-child(3) {
+          width: 23.6%;
+        }
+        .quantity {
+          .plus{
+            right: 0;
+          }
+          .minus{
+            right: 28px;
+          }
+          input {
+            width: 130px;
+            padding: 10px 60px 10px 24px;
+          }
+        }
+      }
+    }
+    &-info {
+      .total {
+        margin-bottom: 25px;
+        width: 330px;
+        padding: 20px 30px 20px 30px;
+      }
+      .btn{
+        padding: 20px 30px;
+        width: 330px;
+      }
+    }
+  }
+  .section__order {
+    padding-top: 65px;
+    &-steps .steps__content .form__groups{
+      padding-right: 25px;
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  .popups__content {
+    padding: 30px 15px 40px;
+    h2{
+      margin-bottom: 20px;
+    }
+    .desc {
+      font-size: 14px;
+      line-height:18px;
+    }
+  }
+  .product__content{
+    padding-top: 35px;
+    flex-direction: column;
+    .image{
+      margin-bottom: 35px;
+    }
+  }
+  .product__description{
+    padding: 0 0 85px;
+    .desc{
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  .wrapper{
+    padding-top: 60px;
+  }
+  .header{
+    &__menu{
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 11;
+      background-color: #fff;
+      border-top: 1px solid #dddddd;
+      padding: 35px 15px;
+      transform: translateX(100%);
+      transition: all .3s ease;
+      &.active{
+        transform: translateX(0);
+      }
+      ul{
+        flex-direction: column;
+        li{
+          margin-bottom: 35px;
+          a{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    &__logo{
+      width: 70px;
+      padding-bottom: 0;
+    }
+    &__cart{
+      width: auto;
+      .menu-btn{
+        display: block;
+      }
+    }
+  }
+  .footer__menu{
+    display: none;
+  }
+  .section__sliderHome .slider {
+    &__item {
+      background-position: center;
+      &-content{
+        h2{
+          margin-bottom: 20px;
+          font-size: 20px;
+          line-height: 22px;
+        }
+        .desc{
+          line-height: 18px;
+          text-transform: none;
+          margin-bottom: 30px;
+        }
+        .buttons{
+          flex-wrap: wrap;
+          .btn-full{
+            margin-right: 15px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            min-width: 120px;
+            padding: 9px;
+          }
+          .btn-border{
+            margin-bottom: 15px;
+            min-width: 120px;
+            padding: 9px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .slick-dots {
+      padding: 9px 19px;
+    }
+  }
+  .section__benefits ul{
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    li{
+      width: 50%;
+      margin: 0 0 30px;
+      padding: 0 15px;
+    }
+  }
+  .section__salesHits{
+    padding-top: 0;
+    h1 {
+      padding-top: 50px;
+      margin:0 0 25px;
+      font-size: 28px;
+    }
+    h2{
+      margin-bottom: 15px;
+    }
+    &-list {
+      margin: 0 -15px;
+      .item{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        &__btn{
+          width: 100%;
+          padding: 12px ;
+          text-align: center;
+          margin-top: auto;
+        }
+        &__img{
+          height: 150px;
+          margin-bottom: 10px;
+        }
+        &__price{
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .section__cart {
+    .tableCart{
+      &__body .tr .td{
+        min-height: 130px;
+      }
+      &__header{
+        display: none;
+      }
+      .tr {
+        display: flex;
+        flex-direction: column;
+        .td{
+          width: 100% !important;
+          border-right: 0;
+          &:nth-child(2){
+            min-height: auto;
+          }
+          &:nth-child(3){
+            min-height: auto;
+            padding: 0;
+          }
+          &:nth-child(4){
+            display: none;
+          }
+          &:nth-child(5){
+            min-height: auto;
+          }
+          .quantity {
+            .plus{
+              right: 0;
+            }
+            .minus{
+              right: 28px;
+            }
+            input {
+              width: 130px;
+              padding: 10px 60px 10px 24px;
+            }
+          }
+        }
+      }
+    }
+    &-info {
+      .total {
+        width: 100%;
+      }
+      .btn{
+        width: 100%;
+      }
+    }
+  }
+  .section__order{
+    &-success{
+      padding-top: 100px;
+      padding-bottom: 100px;
+      h1{
+        font-size: 28px;
+      }
+      p{
+        margin-bottom: 65px;
+      }
+      a{
+        width: 100%;
+        padding: 15px;
+      }
+    }
+    h1{
+      margin-bottom: 30px;
+    }
+    &-steps{
+      flex-direction: column;
+      .steps__nav{
+        padding-top: 0;
+          width: 100%;
+        margin-bottom: 55px;
+        ul{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          position: relative;
+          &:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color:#5f5f5f;
+            z-index: 1;
+          }
+          li{
+            width: calc(33.333% - 20px);
+            padding: 12px;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 2;
+            font-size: 14px;
+          }
+        }
+      }
+      .steps__content{
+        .btn{
+          width: 100%;
+          padding: 15px;
+        }
+        .form__group {
+          input{
+            height: 50px;
+            padding: 10px 15px;
+            font-size: 14px;
+          }
+          label{
+            font-size: 14px;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+

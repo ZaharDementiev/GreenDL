@@ -1,0 +1,15 @@
+@font-face {
+    font-family: GothaPro;
+    font-weight: 300;
+    src: url(../fonts/GothaProLig.otf);
+}
+@font-face {
+    font-family: GothaPro;
+    font-weight: 400;
+    src: url(../fonts/GothaProReg.otf);
+}
+@font-face {
+    font-family: GothaPro;
+    font-weight: 500;
+    src: url(../fonts/GothaProMed.otf);
+}
