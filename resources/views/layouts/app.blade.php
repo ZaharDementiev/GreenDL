@@ -8,21 +8,21 @@
     <title>Document</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/reset.css">
 
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/slick-theme.css">
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/media.css">
 </head>
 <body>
 <header>
     <div class="container">
         <div class="header">
             <div class="header__logo">
-                <img src="./image/logo.svg" alt="">
+                <img src="/image/logo.svg" alt="">
             </div>
             <div class="header__menu">
                 <ul>
@@ -33,7 +33,7 @@
                 </ul>
             </div>
             <div class="header__cart">
-                <a href="cart.html">
+                <a href="{{route('cart')}}">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="446.853px" height="446.853px" viewBox="0 0 446.853 446.853" style="enable-background:new 0 0 446.853 446.853;"
                          xml:space="preserve">
@@ -52,7 +52,13 @@
                                     S337.916,409.814,327.373,409.814z"/>
                             </g>
                         </svg>
-                    <span>1</span>
+                    @php
+                        $count = 0;
+                        if (session()->get('products') != null)
+                            foreach (session()->get('products') as $item)
+                                $count += $item['count'];
+                    @endphp
+                    <span>{{$count}}</span>
                 </a>
                 <div class="menu-btn">
                     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M28,10H4A1,1,0,0,1,4,8H28a1,1,0,0,1,0,2Z"/><path d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/><path d="M28,24H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
@@ -148,8 +154,8 @@
         </div>
     </div>
 </div>
-<script src="lib/jquery.min.js"></script>
-<script src="lib/slick.min.js"></script>
-<script src="js/main.js"></script>
+<script src="/lib/jquery.min.js"></script>
+<script src="/lib/slick.min.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

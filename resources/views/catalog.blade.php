@@ -17,9 +17,9 @@
                                     <img src="{{$product->image}}" alt="">
                                 </a>
                             </div>
-                            <div class="item__name"><a href="product.html">{{$product->title}}</a></div>
+                            <div class="item__name"><a href="{{route('store-product', $product->slug)}}">{{$product->title}}</a></div>
                             <div class="item__price">{{$product->price}}р</div>
-                            <a href="cart.html" class="item__btn">купить</a>
+                            <a href="{{route('store-product', $product->slug)}}" class="item__btn">купить</a>
                         </div>
                     @endforeach
                 </div>

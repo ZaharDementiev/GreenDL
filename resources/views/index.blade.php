@@ -12,7 +12,7 @@
                         </div>
                         <div class="buttons">
                             <a href="javascript:void(0)" data-href="#popups__about" class="btn-full popupsBTN">подробнее</a>
-                            <a href="#" class="btn-border">купить</a>
+                            <a href="{{route('catalog', 1)}}" class="btn-border">купить</a>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                         </div>
                         <div class="buttons">
                             <a href="javascript:void(0)" data-href="#popups__about" class="btn-full popupsBTN">подробнее</a>
-                            <a href="#" class="btn-border">купить</a>
+                            <a href="{{route('catalog', 1)}}" class="btn-border">купить</a>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                         </div>
                         <div class="buttons">
                             <a href="javascript:void(0)" data-href="#popups__about" class="btn-full popupsBTN">подробнее</a>
-                            <a href="#" class="btn-border">купить</a>
+                            <a href="{{route('catalog', 1)}}" class="btn-border">купить</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="item__name"><a href="product.html">{{$product->title}}</a></div>
                             <div class="item__price">{{$product->price}}р</div>
-                            <a href="cart.html" class="item__btn">купить</a>
+                            <a href="{{route('store-product', $product->slug)}}" class="item__btn">купить</a>
                         </div>
                     @endforeach
                 </div>
@@ -82,7 +82,7 @@
                 <h2>о нас</h2>
             </div>
             <div class="section__about-img">
-                <img src="./image/img__about.png" alt="">
+                <img src="/image/img__about.png" alt="">
             </div>
             <div class="container">
                 <div class="section__about-desc">

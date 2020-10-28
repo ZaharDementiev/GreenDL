@@ -34,9 +34,16 @@ $(document).ready(function (){
         $(this).next().val(Number($(this).next().val()) + 1)
     });
     $('.quantity .minus').on('click',function (){
+        let id = $(this).parent().next().val();
+        let count = 0;
         if(Number($(this).prev().val()) > 1){
-            $(this).prev().val(Number($(this).prev().val()) - 1)
+            count = $(this).prev().val(Number($(this).prev().val()) - 1).val();
+        } else {
+            $(this).parent().parent().parent().remove();
         }
+        $.post('/product/updateQTI', {id:id, count:count}).then((resp)=>{
+            console.log(resp);
+        });
     });
 
     $('#step-1 .btn').on('click',function (){
