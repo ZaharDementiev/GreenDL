@@ -15,4 +15,6 @@ Route::group([
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () {
     Route::get('dashboard', 'AdminController@dashboard');
+    Route::crud('products', 'ProductsCrudController');
+    Route::crud('orders', 'OrdersCrudController');
 });

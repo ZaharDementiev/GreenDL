@@ -2,10 +2,13 @@
 
 namespace App;
 
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    use CrudTrait;
+
     protected $table = 'products';
     protected $guarded = ['id'];
 

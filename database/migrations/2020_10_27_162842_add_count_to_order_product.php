@@ -14,7 +14,7 @@ class AddCountToOrderProduct extends Migration
     public function up()
     {
         Schema::table('order_product', function (Blueprint $table) {
-            $table->bigInteger('product_count')->default(1);
+            //$table->bigInteger('product_count')->default(1);
         });
     }
 

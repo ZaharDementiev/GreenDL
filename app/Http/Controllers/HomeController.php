@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -46,15 +47,5 @@ class HomeController extends Controller
         }
 
         return response()->json($products,200);
-    }
-
-    public function ebalnahui() {
-        $products = session()->get(Product::KEY_OF_COOKIES);
-        foreach ($products as $key => &$product) {
-            if ($product['product_id'] == 3) {
-                $product['count'] = 2;
-            }
-        }
-        dd($products);
     }
 }

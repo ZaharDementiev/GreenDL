@@ -14,11 +14,11 @@ class OrderController extends Controller
             return redirect(route('cart'));
         }
 
-//        for ($i = 0; $i < count($request->session()->get(Product::KEY_OF_COOKIES)); $i++) {
-//            $product = Product::where('id', $request->session()->get(Product::KEY_OF_COOKIES)[$i]['product_id']);
-//            $product->sales += $request->session()->get(Product::KEY_OF_COOKIES)[0]['count'];
-//            $product->save();
-//        }
+        foreach ($request->session()->get(Product::KEY_OF_COOKIES) as $item) {
+            $product = Product::where('id', $item['product_id'])->first();
+            $product->sales += $item['count'];
+            $product->save();
+        }
 
         $ids = $request->session()->get(Product::KEY_OF_ORDER);
         $order = Order::where('id', array_pop($ids))->first();

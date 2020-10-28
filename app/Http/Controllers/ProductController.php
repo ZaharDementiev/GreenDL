@@ -54,12 +54,14 @@ class ProductController extends Controller
 
         session()->push(Product::KEY_OF_ORDER, $order->id);
 
-        for($i = 0; $i < count($request->input('count')); $i++) {
-            $order->product()->attach('product_order', [
-                'product_id' => $request->input('id')[$i],
-                'order_id' => $order->id,
-                'product_count' => $request->input('count')[$i],
-            ]);
+        for( $i = 0; $i < count($request->input('count')); $i++) {
+            for ($j = 0; $j < $request->input('count')[$i]; $j++) {
+                $order->product()->attach('product_order', [
+                    'product_id' => $request->input('id')[$i],
+                    'order_id' => $order->id,
+                    //'product_count' => $request->input('count')[$i],
+                ]);
+            }
         }
 
         return redirect(route('order'));
